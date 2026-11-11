@@ -1,0 +1,650 @@
+[
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "functional",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "capture",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "desktop",
+    "suite": "capture",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "functional",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "capture",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "laptop",
+    "suite": "capture",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "functional",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "capture",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "tablet",
+    "suite": "capture",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "functional",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "capture",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "project": "mobile",
+    "suite": "capture",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  }
+]

@@ -1,0 +1,220 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project",
+      "desktop",
+      "--grep",
+      "faculty material and announcements"
+    ],
+    "configFile": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\playwright.config.ts",
+    "rootDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop-student-resource-regression",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop-student-resource-regression",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "laptop",
+        "name": "laptop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop-student-resource-regression",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop-student-resource-regression",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop-student-resource-regression",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "snapshotDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "student.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5174",
+          "browserName": "chromium",
+          "channel": "chromium",
+          "headless": true,
+          "timezoneId": "Asia/Kolkata",
+          "locale": "en-IN",
+          "trace": "off",
+          "video": "off",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../qa/results/desktop-student-resource-regression.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "../qa/html/desktop-student-resource-regression",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "student.spec.ts",
+      "file": "student.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "faculty material and announcements appear in student LMS after refresh",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2552,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:11:56.691Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-98fa86d10f845834f232",
+          "file": "student.spec.ts",
+          "line": 386,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T21:11:56.257Z",
+    "duration": 4608.597,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

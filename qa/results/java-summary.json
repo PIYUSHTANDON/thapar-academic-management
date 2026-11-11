@@ -1,0 +1,14 @@
+[
+  {
+    "suite": "com.thapar.ams.AcademicIntegrationTest",
+    "tests": 10,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "suite": "com.thapar.ams.LoginThrottleTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0
+  }
+]

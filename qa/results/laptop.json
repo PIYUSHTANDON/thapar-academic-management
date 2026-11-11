@@ -1,0 +1,808 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project",
+      "laptop"
+    ],
+    "configFile": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\playwright.config.ts",
+    "rootDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/laptop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/laptop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "laptop",
+        "name": "laptop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/laptop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/laptop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\laptop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "laptop",
+        "testDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "snapshotDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5174",
+          "browserName": "chromium",
+          "channel": "chromium",
+          "headless": true,
+          "timezoneId": "Asia/Kolkata",
+          "locale": "en-IN",
+          "trace": "off",
+          "video": "off",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 1366,
+            "height": 768
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "laptop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../qa/results/laptop.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "../qa/html/laptop",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "academic.spec.ts",
+      "file": "academic.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "main localhost, role selection and branded login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1357,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:40.421Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-ccffa3a955230ef84f59",
+          "file": "academic.spec.ts",
+          "line": 146,
+          "column": 1
+        },
+        {
+          "title": "login validation, password visibility, recovery and invalid credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "401"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1182,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:43.024Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "401"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbeyJwYXRoIjoiL2FwaS92MS9hdXRoL2xvZ2luIiwic3RhdHVzIjo0MDF9XSwiZXJyb3JzIjpbIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDQwMSAoVW5hdXRob3JpemVkKSJdLCJmYWlsZWQiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-7a1ab0612b6586045ebf",
+          "file": "academic.spec.ts",
+          "line": 176,
+          "column": 1
+        },
+        {
+          "title": "faculty UI login, session cookie and backend dashboard statistics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1565,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:44.216Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-1afecb1c0ced7b7ca697",
+          "file": "academic.spec.ts",
+          "line": 209,
+          "column": 1
+        },
+        {
+          "title": "all eight sidebar modules and responsive navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3133,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:45.792Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-e767178ad5ae10a988df",
+          "file": "academic.spec.ts",
+          "line": 243,
+          "column": 1
+        },
+        {
+          "title": "calendar month navigation, date selection and persisted academic event",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1893,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:48.937Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-260bb2aba8fe17eba041",
+          "file": "academic.spec.ts",
+          "line": 282,
+          "column": 1
+        },
+        {
+          "title": "search, notification read and quick access links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2869,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:50.841Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-b132cba787f06dc64f2d",
+          "file": "academic.spec.ts",
+          "line": 309,
+          "column": 1
+        },
+        {
+          "title": "message sending and persisted conversation history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1719,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:53.721Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-3b67c33a82e30e81d203",
+          "file": "academic.spec.ts",
+          "line": 347,
+          "column": 1
+        },
+        {
+          "title": "course information, file upload/download, announcement and student roster",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2983,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:55.453Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-5dcfaaf06e9a4042a6c7",
+          "file": "academic.spec.ts",
+          "line": 360,
+          "column": 1
+        },
+        {
+          "title": "assessment creation, grading and publication persist",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2271,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:04:58.447Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-2f8c7d2002a5aa4c9589",
+          "file": "academic.spec.ts",
+          "line": 410,
+          "column": 1
+        },
+        {
+          "title": "attendance QR, student claim and attendance record persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1723,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:00.729Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-0b011ddbb8dc73463721",
+          "file": "academic.spec.ts",
+          "line": 438,
+          "column": 1
+        },
+        {
+          "title": "settings profile and notification preference persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1611,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:02.464Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-4388dc0502101f2fdf31",
+          "file": "academic.spec.ts",
+          "line": 483,
+          "column": 1
+        },
+        {
+          "title": "student route and server-side faculty access restrictions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 738,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:04.088Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-3ee7f967e72069a66e04",
+          "file": "academic.spec.ts",
+          "line": 499,
+          "column": 1
+        },
+        {
+          "title": "faculty logout invalidates the session and protects routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1304,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:04.839Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-03099a4b1ff5c16dd500",
+          "file": "academic.spec.ts",
+          "line": 516,
+          "column": 1
+        },
+        {
+          "title": "dashboard loading state, clear API failure and successful retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "503"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 925,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:06.154Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "503"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbeyJwYXRoIjoiL2FwaS92MS9mYWN1bHR5L2Rhc2hib2FyZCIsInN0YXR1cyI6NTAzfSx7InBhdGgiOiIvYXBpL3YxL2ZhY3VsdHkvZGFzaGJvYXJkIiwic3RhdHVzIjo1MDN9XSwiZXJyb3JzIjpbIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDUwMyAoU2VydmljZSBVbmF2YWlsYWJsZSkiLCJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA1MDMgKFNlcnZpY2UgVW5hdmFpbGFibGUpIl0sImZhaWxlZCI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-19311389faed1133d822",
+          "file": "academic.spec.ts",
+          "line": 528,
+          "column": 1
+        },
+        {
+          "title": "password validation, password change and reauthentication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "400"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "laptop",
+              "projectName": "laptop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5138,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:07.093Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "400"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbeyJwYXRoIjoiL2FwaS92MS9mYWN1bHR5L3NldHRpbmdzL3Bhc3N3b3JkIiwic3RhdHVzIjo0MDB9XSwiZXJyb3JzIjpbIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDQwMCAoQmFkIFJlcXVlc3QpIl0sImZhaWxlZCI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-dcaa4134bd6f96e52ae0",
+          "file": "academic.spec.ts",
+          "line": 557,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T20:04:40.013Z",
+    "duration": 32516.509000000002,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

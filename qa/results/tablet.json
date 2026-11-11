@@ -1,0 +1,808 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project",
+      "tablet"
+    ],
+    "configFile": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\playwright.config.ts",
+    "rootDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/tablet",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/tablet",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "laptop",
+        "name": "laptop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/tablet",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/tablet",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\tablet",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "tablet",
+        "testDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "snapshotDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5174",
+          "browserName": "chromium",
+          "channel": "chromium",
+          "headless": true,
+          "timezoneId": "Asia/Kolkata",
+          "locale": "en-IN",
+          "trace": "off",
+          "video": "off",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 768,
+            "height": 1024
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "tablet"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../qa/results/tablet.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "../qa/html/tablet",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "academic.spec.ts",
+      "file": "academic.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "main localhost, role selection and branded login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1256,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:35.710Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-eb839e91db85af0c141c",
+          "file": "academic.spec.ts",
+          "line": 146,
+          "column": 1
+        },
+        {
+          "title": "login validation, password visibility, recovery and invalid credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "401"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1752,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:38.215Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "401"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbeyJwYXRoIjoiL2FwaS92MS9hdXRoL2xvZ2luIiwic3RhdHVzIjo0MDF9XSwiZXJyb3JzIjpbIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDQwMSAoVW5hdXRob3JpemVkKSJdLCJmYWlsZWQiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-a6391d86c0d6951bb2a8",
+          "file": "academic.spec.ts",
+          "line": 176,
+          "column": 1
+        },
+        {
+          "title": "faculty UI login, session cookie and backend dashboard statistics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1713,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:39.980Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-61b52a9ca49836507ee7",
+          "file": "academic.spec.ts",
+          "line": 209,
+          "column": 1
+        },
+        {
+          "title": "all eight sidebar modules and responsive navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 5114,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:41.705Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-08392b359965a7a9ac07",
+          "file": "academic.spec.ts",
+          "line": 243,
+          "column": 1
+        },
+        {
+          "title": "calendar month navigation, date selection and persisted academic event",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2179,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:46.834Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-dc634808df58cf0fa26a",
+          "file": "academic.spec.ts",
+          "line": 282,
+          "column": 1
+        },
+        {
+          "title": "search, notification read and quick access links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4277,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:49.026Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-e3245791d1b5e53d8c6f",
+          "file": "academic.spec.ts",
+          "line": 309,
+          "column": 1
+        },
+        {
+          "title": "message sending and persisted conversation history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1816,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:53.315Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-f6f68ec393d3d084d1e0",
+          "file": "academic.spec.ts",
+          "line": 347,
+          "column": 1
+        },
+        {
+          "title": "course information, file upload/download, announcement and student roster",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3289,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:55.140Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-74fafb8263244f7f9dd1",
+          "file": "academic.spec.ts",
+          "line": 360,
+          "column": 1
+        },
+        {
+          "title": "assessment creation, grading and publication persist",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2241,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:05:58.438Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-6693365330b53ee92c10",
+          "file": "academic.spec.ts",
+          "line": 410,
+          "column": 1
+        },
+        {
+          "title": "attendance QR, student claim and attendance record persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1759,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:06:00.688Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-e5776811475cb52b7b74",
+          "file": "academic.spec.ts",
+          "line": 438,
+          "column": 1
+        },
+        {
+          "title": "settings profile and notification preference persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1637,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:06:02.454Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-af189ecfba6a9a8a3952",
+          "file": "academic.spec.ts",
+          "line": 483,
+          "column": 1
+        },
+        {
+          "title": "student route and server-side faculty access restrictions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 618,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:06:04.099Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-fd1588040cfa7ad41244",
+          "file": "academic.spec.ts",
+          "line": 499,
+          "column": 1
+        },
+        {
+          "title": "faculty logout invalidates the session and protects routes",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1132,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:06:04.726Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-6f4deb030fff30e3b2a9",
+          "file": "academic.spec.ts",
+          "line": 516,
+          "column": 1
+        },
+        {
+          "title": "dashboard loading state, clear API failure and successful retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "503"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 658,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:06:05.865Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "503"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbeyJwYXRoIjoiL2FwaS92MS9mYWN1bHR5L2Rhc2hib2FyZCIsInN0YXR1cyI6NTAzfSx7InBhdGgiOiIvYXBpL3YxL2ZhY3VsdHkvZGFzaGJvYXJkIiwic3RhdHVzIjo1MDN9XSwiZXJyb3JzIjpbIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDUwMyAoU2VydmljZSBVbmF2YWlsYWJsZSkiLCJGYWlsZWQgdG8gbG9hZCByZXNvdXJjZTogdGhlIHNlcnZlciByZXNwb25kZWQgd2l0aCBhIHN0YXR1cyBvZiA1MDMgKFNlcnZpY2UgVW5hdmFpbGFibGUpIl0sImZhaWxlZCI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-66e60699fe31688aeb6b",
+          "file": "academic.spec.ts",
+          "line": 528,
+          "column": 1
+        },
+        {
+          "title": "password validation, password change and reauthentication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "400"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "tablet",
+              "projectName": "tablet",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4036,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T20:06:06.531Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "400"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbeyJwYXRoIjoiL2FwaS92MS9mYWN1bHR5L3NldHRpbmdzL3Bhc3N3b3JkIiwic3RhdHVzIjo0MDB9XSwiZXJyb3JzIjpbIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDQwMCAoQmFkIFJlcXVlc3QpIl0sImZhaWxlZCI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-76364befdeaa5ca2e21d",
+          "file": "academic.spec.ts",
+          "line": 557,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T20:05:35.312Z",
+    "duration": 35518.189000000006,
+    "expected": 15,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

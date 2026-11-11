@@ -1,0 +1,43 @@
+{
+  "url": "http://127.0.0.1:5173/login/faculty",
+  "identifier": "FACULTY001",
+  "name": "Demo Faculty",
+  "role": "FACULTY",
+  "backendAuthentication": true,
+  "browserAuthentication": true,
+  "dashboardLoaded": true,
+  "statistics": {
+    "totalStudents": 1,
+    "pendingReviews": 1,
+    "actions": [
+      {
+        "status": "Draft",
+        "course": "CSE 3A",
+        "path": "/faculty/assessments",
+        "title": "Review Demo DSA problem set"
+      },
+      {
+        "status": "Draft",
+        "course": "CSE 3B",
+        "path": "/faculty/assessments",
+        "title": "Review Demo practice quiz 1"
+      },
+      {
+        "status": "Draft",
+        "course": "CSE 3A",
+        "path": "/faculty/assessments",
+        "title": "Review Demo practice quiz 2"
+      }
+    ],
+    "activeClasses": 3,
+    "attendancePercentage": 100
+  },
+  "associatedRecords": {
+    "courses": 3,
+    "assessments": 3,
+    "attendance": 1,
+    "schedule": 4
+  },
+  "errors": [],
+  "failed": []
+}

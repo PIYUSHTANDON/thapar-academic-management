@@ -1,0 +1,34 @@
+[
+  {
+    "project": "desktop",
+    "viewport": "1920 x 1080",
+    "passed": true,
+    "studentTests": 11,
+    "facultyTests": 15,
+    "resourceRegressionTests": 1
+  },
+  {
+    "project": "laptop",
+    "viewport": "1366 x 768",
+    "passed": true,
+    "studentTests": 11,
+    "facultyTests": 15,
+    "resourceRegressionTests": 1
+  },
+  {
+    "project": "tablet",
+    "viewport": "768 x 1024",
+    "passed": true,
+    "studentTests": 11,
+    "facultyTests": 15,
+    "resourceRegressionTests": 1
+  },
+  {
+    "project": "mobile",
+    "viewport": "390 x 844",
+    "passed": true,
+    "studentTests": 11,
+    "facultyTests": 15,
+    "resourceRegressionTests": 1
+  }
+]

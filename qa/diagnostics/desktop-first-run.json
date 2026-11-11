@@ -1,0 +1,920 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project",
+      "desktop"
+    ],
+    "configFile": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\playwright.config.ts",
+    "rootDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "laptop",
+        "name": "laptop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/desktop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "desktop",
+        "testDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "snapshotDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5174",
+          "browserName": "chromium",
+          "channel": "chromium",
+          "headless": true,
+          "timezoneId": "Asia/Kolkata",
+          "locale": "en-IN",
+          "trace": "off",
+          "video": "off",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 1920,
+            "height": 1080
+          }
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "desktop"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../qa/results/desktop.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "../qa/html/desktop",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "academic.spec.ts",
+      "file": "academic.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "main localhost, role selection and branded login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1868,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:51:45.877Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-28b90394d5123b41c21a",
+          "file": "academic.spec.ts",
+          "line": 143,
+          "column": 1
+        },
+        {
+          "title": "login validation, password visibility, recovery and invalid credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "401"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1398,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:51:48.837Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "401"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbeyJwYXRoIjoiL2FwaS92MS9hdXRoL2xvZ2luIiwic3RhdHVzIjo0MDF9XSwiZXJyb3JzIjpbIkZhaWxlZCB0byBsb2FkIHJlc291cmNlOiB0aGUgc2VydmVyIHJlc3BvbmRlZCB3aXRoIGEgc3RhdHVzIG9mIDQwMSAoVW5hdXRob3JpemVkKSJdLCJmYWlsZWQiOltdfQ=="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-c8be0aaaa028aacf46ae",
+          "file": "academic.spec.ts",
+          "line": 173,
+          "column": 1
+        },
+        {
+          "title": "faculty UI login, session cookie and backend dashboard statistics",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1874,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:51:50.245Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-e44146ce357c7f31706e",
+          "file": "academic.spec.ts",
+          "line": 206,
+          "column": 1
+        },
+        {
+          "title": "all eight sidebar modules and responsive navigation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3393,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:51:52.128Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-262d3cbed2d4bcc7083a",
+          "file": "academic.spec.ts",
+          "line": 240,
+          "column": 1
+        },
+        {
+          "title": "calendar month navigation, date selection and persisted academic event",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1320,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:51:55.532Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-600a6d1415211e618772",
+          "file": "academic.spec.ts",
+          "line": 279,
+          "column": 1
+        },
+        {
+          "title": "search, notification read and quick access links",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2269,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:51:56.861Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-6877f48c4596842eadca",
+          "file": "academic.spec.ts",
+          "line": 306,
+          "column": 1
+        },
+        {
+          "title": "message sending and persisted conversation history",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1031,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:51:59.140Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-e9006662a7b8a517b722",
+          "file": "academic.spec.ts",
+          "line": 344,
+          "column": 1
+        },
+        {
+          "title": "course information, file upload/download, announcement and student roster",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60189,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                        "column": 57,
+                        "line": 362
+                      },
+                      "message": "Error: locator.fill: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Description', { exact: true })\u001b[22m\n\n\n  360 |   await nav(page, \"Courses & LMS\");\n  361 |   const text = \"QA course description \" + randomBytes(3).toString(\"hex\");\n> 362 |   await page.getByLabel(\"Description\", { exact: true }).fill(text);\n      |                                                         ^\n  363 |   await page.getByRole(\"button\", { name: \"Save course\", exact: true }).click();\n  364 |   await expect(page.getByRole(\"status\")).toContainText(\"Course updated\");\n  365 |   await page.reload();\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:362:57"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:52:00.181Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-course-informatio-ba3d3-uncement-and-student-roster-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-course-informatio-ba3d3-uncement-and-student-roster-desktop\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-f80f2a01769f0a5725eb",
+          "file": "academic.spec.ts",
+          "line": 357,
+          "column": 1
+        },
+        {
+          "title": "assessment creation, grading and publication persist",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60233,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                        "column": 50,
+                        "line": 413
+                      },
+                      "message": "Error: locator.selectOption: Test timeout of 60000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByLabel('Type', { exact: true })\u001b[22m\n\n\n  411 |   const title = \"QA assignment \" + randomBytes(3).toString(\"hex\");\n  412 |   await page.getByLabel(\"Title\", { exact: true }).fill(title);\n> 413 |   await page.getByLabel(\"Type\", { exact: true }).selectOption(\"Assignment\");\n      |                                                  ^\n  414 |   await page.getByLabel(\"Deadline\", { exact: true }).fill(\"2099-12-01T12:00\");\n  415 |   await page\n  416 |     .getByRole(\"button\", { name: \"Create assessment\", exact: true })\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:413:50"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:53:00.944Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-assessment-creation-grading-and-publication-persist-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-assessment-creation-grading-and-publication-persist-desktop\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-2352e82326d2878ac38e",
+          "file": "academic.spec.ts",
+          "line": 407,
+          "column": 1
+        },
+        {
+          "title": "attendance QR, student claim and attendance record persistence",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1373,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:54:02.627Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-986a02d1c8bbac9aa30f",
+          "file": "academic.spec.ts",
+          "line": 433,
+          "column": 1
+        },
+        {
+          "title": "settings profile and notification preference persistence",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 834,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('status')\nExpected substring: \u001b[32m\"Profile updated\"\u001b[39m\nError: strict mode violation: getByRole('status') resolved to 2 elements:\n    1) <div class=\"toast\" role=\"status\">…</div> aka getByText('Profile updated')\n    2) <p role=\"status\" class=\"loading\">Loading your workspace…</p> aka getByText('Loading your workspace…')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('status') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('status')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('status')\nExpected substring: \u001b[32m\"Profile updated\"\u001b[39m\nError: strict mode violation: getByRole('status') resolved to 2 elements:\n    1) <div class=\"toast\" role=\"status\">…</div> aka getByText('Profile updated')\n    2) <p role=\"status\" class=\"loading\">Loading your workspace…</p> aka getByText('Loading your workspace…')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('status') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('status')\u001b[22m\n\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:486:42",
+                    "location": {
+                      "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                      "column": 42,
+                      "line": 486
+                    },
+                    "snippet": " \u001b[90m 484 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Enable notification preferences\"\u001b[39m)\u001b[33m.\u001b[39muncheck()\u001b[33m;\u001b[39m\n \u001b[90m 485 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"button\"\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m\"Save changes\"\u001b[39m\u001b[33m,\u001b[39m exact\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 486 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"status\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"Profile updated\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 487 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mreload()\u001b[33m;\u001b[39m\n \u001b[90m 488 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByLabel(\u001b[32m\"Full name\"\u001b[39m))\u001b[33m.\u001b[39mtoHaveValue(name)\u001b[33m;\u001b[39m\n \u001b[90m 489 |\u001b[39m   \u001b[36mawait\u001b[39m expect("
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                        "column": 42,
+                        "line": 486
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('status')\nExpected substring: \u001b[32m\"Profile updated\"\u001b[39m\nError: strict mode violation: getByRole('status') resolved to 2 elements:\n    1) <div class=\"toast\" role=\"status\">…</div> aka getByText('Profile updated')\n    2) <p role=\"status\" class=\"loading\">Loading your workspace…</p> aka getByText('Loading your workspace…')\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('status') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('status')\u001b[22m\n\n\n  484 |   await page.getByLabel(\"Enable notification preferences\").uncheck();\n  485 |   await page.getByRole(\"button\", { name: \"Save changes\", exact: true }).click();\n> 486 |   await expect(page.getByRole(\"status\")).toContainText(\"Profile updated\");\n      |                                          ^\n  487 |   await page.reload();\n  488 |   await expect(page.getByLabel(\"Full name\")).toHaveValue(name);\n  489 |   await expect(\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:486:42"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:54:04.693Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-settings-profile--d00ae-tion-preference-persistence-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-settings-profile--d00ae-tion-preference-persistence-desktop\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                    "column": 42,
+                    "line": 486
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-c9cd2401ccc74393af64",
+          "file": "academic.spec.ts",
+          "line": 478,
+          "column": 1
+        },
+        {
+          "title": "student route and server-side faculty access restrictions",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 10819,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading')\nExpected substring: \u001b[32m\"You\u001b[7m?\u001b[27mre signed in\"\u001b[39m\nReceived string:    \u001b[31m\"You\u001b[7m’\u001b[27mre signed in\u001b[7m, Demo Student.\u001b[27m\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('heading') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading')\u001b[22m\n\u001b[2m    23 × locator resolved to <h1>You’re signed in, Demo Student.</h1>\u001b[22m\n\u001b[2m       - unexpected value \"You’re signed in, Demo Student.\"\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading')\nExpected substring: \u001b[32m\"You\u001b[7m?\u001b[27mre signed in\"\u001b[39m\nReceived string:    \u001b[31m\"You\u001b[7m’\u001b[27mre signed in\u001b[7m, Demo Student.\u001b[27m\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('heading') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading')\u001b[22m\n\u001b[2m    23 × locator resolved to <h1>You’re signed in, Demo Student.</h1>\u001b[22m\n\u001b[2m       - unexpected value \"You’re signed in, Demo Student.\"\u001b[22m\n\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:502:43",
+                    "location": {
+                      "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                      "column": 43,
+                      "line": 502
+                    },
+                    "snippet": " \u001b[90m 500 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/faculty/dashboard\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 501 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page)\u001b[33m.\u001b[39mtoHaveURL(\u001b[35m/student\\/pending/\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 502 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m\"heading\"\u001b[39m))\u001b[33m.\u001b[39mtoContainText(\u001b[32m\"You?re signed in\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m     |\u001b[39m                                           \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 503 |\u001b[39m   \u001b[36mconst\u001b[39m res \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mget(\u001b[32m\"/api/v1/faculty/students\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 504 |\u001b[39m   expect(res\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m403\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 505 |\u001b[39m   \u001b[36mconst\u001b[39m noCsrf \u001b[33m=\u001b[39m \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mrequest\u001b[33m.\u001b[39mpost(\u001b[32m\"/api/v1/student/attendance/claim\"\u001b[39m\u001b[33m,\u001b[39m {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                        "column": 43,
+                        "line": 502
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoContainText\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('heading')\nExpected substring: \u001b[32m\"You\u001b[7m?\u001b[27mre signed in\"\u001b[39m\nReceived string:    \u001b[31m\"You\u001b[7m’\u001b[27mre signed in\u001b[7m, Demo Student.\u001b[27m\"\u001b[39m\nTimeout: 10000ms\n\nCall log:\n\u001b[2m  - Expect \"toContainText\" getByRole('heading') with timeout 10000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading')\u001b[22m\n\u001b[2m    23 × locator resolved to <h1>You’re signed in, Demo Student.</h1>\u001b[22m\n\u001b[2m       - unexpected value \"You’re signed in, Demo Student.\"\u001b[22m\n\n\n  500 |   await page.goto(\"/faculty/dashboard\");\n  501 |   await expect(page).toHaveURL(/student\\/pending/);\n> 502 |   await expect(page.getByRole(\"heading\")).toContainText(\"You?re signed in\");\n      |                                           ^\n  503 |   const res = await page.request.get(\"/api/v1/faculty/students\");\n  504 |   expect(res.status()).toBe(403);\n  505 |   const noCsrf = await page.request.post(\"/api/v1/student/attendance/claim\", {\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:502:43"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:54:06.105Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-student-route-and-95f29-faculty-access-restrictions-desktop\\test-failed-1.png"
+                    },
+                    {
+                      "name": "browser-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJodHRwIjpbXSwiZXJyb3JzIjpbXSwiZmFpbGVkIjpbXX0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-student-route-and-95f29-faculty-access-restrictions-desktop\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                    "column": 43,
+                    "line": 502
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-ccb245fd18ed918baf9a",
+          "file": "academic.spec.ts",
+          "line": 494,
+          "column": 1
+        },
+        {
+          "title": "faculty logout invalidates the session and protects routes",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": 4,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 0,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m429\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m429\u001b[39m\n    at apiLogin (C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:80:24)\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:136:18",
+                    "location": {
+                      "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                      "column": 24,
+                      "line": 80
+                    },
+                    "snippet": " \u001b[90m 78 |\u001b[39m     }\u001b[33m,\u001b[39m\n \u001b[90m 79 |\u001b[39m   })\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 80 |\u001b[39m   expect(res\u001b[33m.\u001b[39mstatus())\u001b[33m.\u001b[39mtoBe(\u001b[35m200\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 81 |\u001b[39m   \u001b[36mreturn\u001b[39m request\u001b[33m.\u001b[39mstorageState()\u001b[33m;\u001b[39m\n \u001b[90m 82 |\u001b[39m }\n \u001b[90m 83 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m uiLogin(page\u001b[33m:\u001b[39m \u001b[33mPage\u001b[39m\u001b[33m,\u001b[39m role\u001b[33m:\u001b[39m \u001b[32m\"faculty\"\u001b[39m \u001b[33m|\u001b[39m \u001b[32m\"student\"\u001b[39m \u001b[33m=\u001b[39m \u001b[32m\"faculty\"\u001b[39m) {"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                        "column": 24,
+                        "line": 80
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m200\u001b[39m\nReceived: \u001b[31m429\u001b[39m\n\n  78 |     },\n  79 |   });\n> 80 |   expect(res.status()).toBe(200);\n     |                        ^\n  81 |   return request.storageState();\n  82 | }\n  83 | async function uiLogin(page: Page, role: \"faculty\" | \"student\" = \"faculty\") {\n    at apiLogin (C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:80:24)\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts:136:18"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:54:18.145Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\desktop\\academic-faculty-logout-in-00f98-session-and-protects-routes-desktop\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\academic.spec.ts",
+                    "column": 24,
+                    "line": 80
+                  }
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-0e23b8da52b3ea1402b6",
+          "file": "academic.spec.ts",
+          "line": 511,
+          "column": 1
+        },
+        {
+          "title": "dashboard loading state, clear API failure and successful retry",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:54:18.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-7767eb78be4716eff294",
+          "file": "academic.spec.ts",
+          "line": 524,
+          "column": 1
+        },
+        {
+          "title": "password validation, password change and reauthentication",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop",
+              "projectName": "desktop",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T19:54:18.218Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "a6ab7386125b1ea35aaa-0180a257d22029c737f5",
+          "file": "academic.spec.ts",
+          "line": 532,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T19:51:45.416Z",
+    "duration": 152814.695,
+    "expected": 8,
+    "skipped": 2,
+    "unexpected": 5,
+    "flaky": 0
+  }
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "project": "desktop",
+    "passed": true,
+    "errors": [],
+    "studentLogin": true,
+    "studentLogout": true
+  },
+  {
+    "project": "laptop",
+    "passed": true,
+    "errors": [],
+    "studentLogin": true,
+    "studentLogout": true
+  },
+  {
+    "project": "tablet",
+    "passed": true,
+    "errors": [],
+    "studentLogin": true,
+    "studentLogout": true
+  },
+  {
+    "project": "mobile",
+    "passed": true,
+    "errors": [],
+    "studentLogin": true,
+    "studentLogout": true
+  }
+]

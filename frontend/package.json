@@ -1,0 +1,35 @@
+{
+  "name": "thapar-academic-management",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "tsc -b && vite build",
+    "test:e2e": "node ../scripts/run-browser-qa.mjs",
+    "test:e2e:direct": "playwright test",
+    "test:student": "node ../scripts/run-student-qa.mjs"
+  },
+  "dependencies": {
+    "@zxing/browser": "^0.2.1",
+    "axios": "^1.9.0",
+    "lucide-react": "^0.511.0",
+    "qrcode": "^1.5.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router-dom": "^7.6.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.0",
+    "@tailwindcss/vite": "^4.1.7",
+    "@types/qrcode": "^1.5.5",
+    "@types/react": "^19.1.0",
+    "@types/react-dom": "^19.1.0",
+    "@vitejs/plugin-react": "^4.4.1",
+    "prettier": "^3.9.10",
+    "prettier-plugin-java": "^2.11.0",
+    "tailwindcss": "^4.1.7",
+    "typescript": "~5.8.3",
+    "vite": "^6.3.5"
+  }
+}

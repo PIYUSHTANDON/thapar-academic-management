@@ -1,0 +1,10 @@
+alter table ams_student add column academic_year integer;
+alter table ams_student add column semester integer;
+alter table ams_student add column official_cgpa decimal(4,2);
+alter table ams_enrollment add column active boolean not null default true;
+alter table ams_grade add column feedback varchar(2000);
+alter table ams_learningresource add column description varchar(4000);
+alter table ams_learningresource add column published_at timestamp(6) default current_timestamp;
+alter table ams_submission add column file_content longblob;
+alter table ams_submission add column file_name varchar(255);
+alter table ams_submission add column content_type varchar(255);

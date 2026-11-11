@@ -1,0 +1,249 @@
+[
+  {
+    "name": "desktop",
+    "loginWidth": {
+      "viewport": 1920,
+      "document": 1920
+    },
+    "dashboardWidth": {
+      "viewport": 1920,
+      "document": 1920,
+      "overflow": []
+    },
+    "errors": [
+      "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 404 (Not Found)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "responses": [
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      }
+    ]
+  },
+  {
+    "name": "laptop",
+    "loginWidth": {
+      "viewport": 1366,
+      "document": 1366
+    },
+    "dashboardWidth": {
+      "viewport": 1366,
+      "document": 1366,
+      "overflow": []
+    },
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "responses": [
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      }
+    ]
+  },
+  {
+    "name": "tablet",
+    "loginWidth": {
+      "viewport": 768,
+      "document": 768
+    },
+    "dashboardWidth": {
+      "viewport": 768,
+      "document": 768,
+      "overflow": []
+    },
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "responses": [
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      }
+    ]
+  },
+  {
+    "name": "mobile",
+    "loginWidth": {
+      "viewport": 390,
+      "document": 390
+    },
+    "dashboardWidth": {
+      "viewport": 390,
+      "document": 390,
+      "overflow": [
+        {
+          "tag": "TABLE",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "THEAD",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "TH",
+          "class": "",
+          "right": 420
+        },
+        {
+          "tag": "TH",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "TBODY",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "right": 420
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "SPAN",
+          "class": "badge upcoming",
+          "right": 518
+        },
+        {
+          "tag": "I",
+          "class": "",
+          "right": 451
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "right": 420
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "SPAN",
+          "class": "badge upcoming",
+          "right": 518
+        },
+        {
+          "tag": "I",
+          "class": "",
+          "right": 451
+        },
+        {
+          "tag": "TR",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "right": 420
+        },
+        {
+          "tag": "TD",
+          "class": "",
+          "right": 534
+        },
+        {
+          "tag": "SPAN",
+          "class": "badge upcoming",
+          "right": 518
+        }
+      ]
+    },
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)",
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "responses": [
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      },
+      {
+        "url": "/api/v1/auth/me",
+        "status": 401
+      }
+    ]
+  }
+]

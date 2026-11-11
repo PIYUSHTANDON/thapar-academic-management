@@ -1,0 +1,26 @@
+[
+  {
+    "suite": "com.thapar.ams.AcademicIntegrationTest",
+    "passed": 10
+  },
+  {
+    "suite": "com.thapar.ams.LocalFacultyDemoSeederTest",
+    "passed": 5
+  },
+  {
+    "suite": "com.thapar.ams.LocalStudentDemoSeederTest",
+    "passed": 4
+  },
+  {
+    "suite": "com.thapar.ams.LoginThrottleTest",
+    "passed": 2
+  },
+  {
+    "suite": "com.thapar.ams.security.LocalDevelopmentPolicyTest",
+    "passed": 3
+  },
+  {
+    "suite": "com.thapar.ams.StudentPortalIntegrationTest",
+    "passed": 13
+  }
+]

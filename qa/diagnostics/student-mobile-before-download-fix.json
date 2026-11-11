@@ -1,0 +1,686 @@
+{
+  "config": {
+    "argv": [
+      "C:\\Program Files\\nodejs\\node.exe",
+      "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\node_modules\\@playwright\\test\\cli.js",
+      "test",
+      "--project",
+      "mobile"
+    ],
+    "configFile": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\playwright.config.ts",
+    "rootDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/mobile-student-phase3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "desktop",
+        "name": "desktop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/mobile-student-phase3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "laptop",
+        "name": "laptop",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/mobile-student-phase3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "tablet",
+        "name": "tablet",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      },
+      {
+        "outputDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/test-results/mobile-student-phase3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "mobile",
+        "name": "mobile",
+        "testDir": "C:/Users/tando/Downloads/thapar-academic-management/frontend/e2e",
+        "testIgnore": [],
+        "testMatch": [
+          "student.spec.ts"
+        ],
+        "timeout": 60000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\mobile-student-phase3",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "mobile",
+        "testDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "snapshotDir": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e",
+        "testIgnore": [],
+        "testMatch": "student.spec.ts",
+        "timeout": 60000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5174",
+          "browserName": "chromium",
+          "channel": "chromium",
+          "headless": true,
+          "timezoneId": "Asia/Kolkata",
+          "locale": "en-IN",
+          "trace": "off",
+          "video": "off",
+          "screenshot": "only-on-failure",
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "isMobile": true,
+          "hasTouch": true
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "mobile"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "json",
+        {
+          "outputFile": "../qa/results/mobile-student-phase3.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "../qa/html/mobile-student-phase3",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.65.0",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "student.spec.ts",
+      "file": "student.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "student login, approved dashboard, official CGPA fallback and exactly three quick actions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1525,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:01:33.486Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-e7e2f39a5d4846a2e2ed",
+          "file": "student.spec.ts",
+          "line": 187,
+          "column": 1
+        },
+        {
+          "title": "all eight student routes, mobile drawer and responsive module layouts",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 7109,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:01:36.281Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-bbe462bec4a9f9433cdc",
+          "file": "student.spec.ts",
+          "line": 219,
+          "column": 1
+        },
+        {
+          "title": "quick-action destinations, course search, notification read and announcement details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4711,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:01:43.402Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-d66792dd02dfcfa69b63",
+          "file": "student.spec.ts",
+          "line": 254,
+          "column": 1
+        },
+        {
+          "title": "faculty assignment to student upload to published feedback and results",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 4284,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:01:48.132Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-2cdbcba2fd51dea530ca",
+          "file": "student.spec.ts",
+          "line": 298,
+          "column": 1
+        },
+        {
+          "title": "student and faculty messages synchronize in both directions",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2638,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:01:52.425Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-0656a3c668d6f1e0013b",
+          "file": "student.spec.ts",
+          "line": 365,
+          "column": 1
+        },
+        {
+          "title": "faculty material and announcements appear in student LMS after refresh",
+          "ok": false,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "timedOut",
+                  "duration": 60103,
+                  "error": {
+                    "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m",
+                    "stack": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                  },
+                  "errors": [
+                    {
+                      "message": "\u001b[31mTest timeout of 60000ms exceeded.\u001b[39m"
+                    },
+                    {
+                      "location": {
+                        "file": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\student.spec.ts",
+                        "column": 10,
+                        "line": 411
+                      },
+                      "message": "Error: page.waitForEvent: Test timeout of 60000ms exceeded.\n=========================== logs ===========================\nwaiting for event \"download\"\n============================================================\n\n  409 |   ]);\n  410 |   const [download] = await Promise.all([\n> 411 |     page.waitForEvent(\"download\"),\n      |          ^\n  412 |     page.getByRole(\"link\", { name: \"Download shared-notes.txt\" }).click(),\n  413 |   ]);\n  414 |   expect(await download.failure()).toBeNull();\n    at C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\e2e\\student.spec.ts:411:10"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:01:55.073Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\mobile-student-phase3\\student-faculty-material-a-910f1-n-student-LMS-after-refresh-mobile\\test-failed-1.png"
+                    },
+                    {
+                      "name": "screenshot",
+                      "contentType": "image/png",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\mobile-student-phase3\\student-faculty-material-a-910f1-n-student-LMS-after-refresh-mobile\\test-failed-2.png"
+                    },
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\mobile-student-phase3\\student-faculty-material-a-910f1-n-student-LMS-after-refresh-mobile\\error-context.md"
+                    },
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\tando\\Downloads\\thapar-academic-management\\frontend\\test-results\\mobile-student-phase3\\student-faculty-material-a-910f1-n-student-LMS-after-refresh-mobile\\error-context.md"
+                    }
+                  ]
+                }
+              ],
+              "status": "unexpected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-a0da4b1c60862091890c",
+          "file": "student.spec.ts",
+          "line": 386,
+          "column": 1
+        },
+        {
+          "title": "faculty QR image decodes locally, student claims attendance and replay is rejected",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "409"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3015,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:02:55.775Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "409"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOlsiRmFpbGVkIHRvIGxvYWQgcmVzb3VyY2U6IHRoZSBzZXJ2ZXIgcmVzcG9uZGVkIHdpdGggYSBzdGF0dXMgb2YgNDA5IChDb25mbGljdCkiXSwiaHR0cCI6W3sicGF0aCI6Ii9hcGkvdjEvc3R1ZGVudC9hdHRlbmRhbmNlL2NsYWltIiwic3RhdHVzIjo0MDl9XSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-1b5640d2736a9525d0d6",
+          "file": "student.spec.ts",
+          "line": 426,
+          "column": 1
+        },
+        {
+          "title": "calendar events, month navigation and faculty timetable edits synchronize",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2671,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:02:59.690Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-11c6b403c58704a8b50f",
+          "file": "student.spec.ts",
+          "line": 461,
+          "column": 1
+        },
+        {
+          "title": "role restrictions, upload errors and protected official academic fields",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "400"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1353,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:03:02.371Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "400"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOlsiRmFpbGVkIHRvIGxvYWQgcmVzb3VyY2U6IHRoZSBzZXJ2ZXIgcmVzcG9uZGVkIHdpdGggYSBzdGF0dXMgb2YgNDAwIChCYWQgUmVxdWVzdCkiXSwiaHR0cCI6W3sicGF0aCI6Ii9hcGkvdjEvc3R1ZGVudC9zdWJtaXNzaW9ucyIsInN0YXR1cyI6NDAwfV0sImZhaWxlZCI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-99ef641fdcff4890f6f9",
+          "file": "student.spec.ts",
+          "line": 500,
+          "column": 1
+        },
+        {
+          "title": "settings preferences persist and student logout protects the dashboard",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2063,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:03:03.736Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOltdLCJodHRwIjpbXSwiZmFpbGVkIjpbXX0="
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-03d23f34765cc15e3202",
+          "file": "student.spec.ts",
+          "line": 531,
+          "column": 1
+        },
+        {
+          "title": "student password change refreshes CSRF and accepts only the new password",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 60000,
+              "annotations": [
+                {
+                  "type": "expected-http",
+                  "description": "400"
+                }
+              ],
+              "expectedStatus": "passed",
+              "projectId": "mobile",
+              "projectName": "mobile",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 3813,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-10T21:03:05.816Z",
+                  "annotations": [
+                    {
+                      "type": "expected-http",
+                      "description": "400"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "student-network-audit",
+                      "contentType": "application/json",
+                      "body": "eyJlcnJvcnMiOlsiRmFpbGVkIHRvIGxvYWQgcmVzb3VyY2U6IHRoZSBzZXJ2ZXIgcmVzcG9uZGVkIHdpdGggYSBzdGF0dXMgb2YgNDAwIChCYWQgUmVxdWVzdCkiXSwiaHR0cCI6W3sicGF0aCI6Ii9hcGkvdjEvc3R1ZGVudC9zZXR0aW5ncy9wYXNzd29yZCIsInN0YXR1cyI6NDAwfV0sImZhaWxlZCI6W119"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "28673771c95032e93b6d-8e57c1c1e2a8d8a27d85",
+          "file": "student.spec.ts",
+          "line": 549,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-10T21:01:33.110Z",
+    "duration": 96752.758,
+    "expected": 10,
+    "skipped": 0,
+    "unexpected": 1,
+    "flaky": 0
+  }
+}

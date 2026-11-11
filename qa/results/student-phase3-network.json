@@ -1,0 +1,1054 @@
+[
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "student login, approved dashboard, official CGPA fallback and exactly three quick actions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "all eight student routes, mobile drawer and responsive module layouts",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "quick-action destinations, course search, notification read and announcement details",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "faculty assignment to student upload to published feedback and results",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "student and faculty messages synchronize in both directions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "faculty QR image decodes locally, student claims attendance and replay is rejected",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 409 (Conflict)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/attendance/claim",
+        "status": 409
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "calendar events, month navigation and faculty timetable edits synchronize",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "role restrictions, upload errors and protected official academic fields",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/submissions",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "settings preferences persist and student logout protects the dashboard",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-phase3",
+    "test": "student password change refreshes CSRF and accepts only the new password",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/settings/password",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "faculty-phase3",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "desktop",
+    "suite": "student-resource-regression",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "student login, approved dashboard, official CGPA fallback and exactly three quick actions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "all eight student routes, mobile drawer and responsive module layouts",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "quick-action destinations, course search, notification read and announcement details",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "faculty assignment to student upload to published feedback and results",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "student and faculty messages synchronize in both directions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "faculty QR image decodes locally, student claims attendance and replay is rejected",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 409 (Conflict)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/attendance/claim",
+        "status": 409
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "calendar events, month navigation and faculty timetable edits synchronize",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "role restrictions, upload errors and protected official academic fields",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/submissions",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "settings preferences persist and student logout protects the dashboard",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-phase3",
+    "test": "student password change refreshes CSRF and accepts only the new password",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/settings/password",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "faculty-phase3",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "laptop",
+    "suite": "student-resource-regression",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "student login, approved dashboard, official CGPA fallback and exactly three quick actions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "all eight student routes, mobile drawer and responsive module layouts",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "quick-action destinations, course search, notification read and announcement details",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "faculty assignment to student upload to published feedback and results",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "student and faculty messages synchronize in both directions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "faculty QR image decodes locally, student claims attendance and replay is rejected",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 409 (Conflict)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/attendance/claim",
+        "status": 409
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "calendar events, month navigation and faculty timetable edits synchronize",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "role restrictions, upload errors and protected official academic fields",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/submissions",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "settings preferences persist and student logout protects the dashboard",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-phase3",
+    "test": "student password change refreshes CSRF and accepts only the new password",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/settings/password",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "faculty-phase3",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "tablet",
+    "suite": "student-resource-regression",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "student login, approved dashboard, official CGPA fallback and exactly three quick actions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "all eight student routes, mobile drawer and responsive module layouts",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "quick-action destinations, course search, notification read and announcement details",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "faculty assignment to student upload to published feedback and results",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "student and faculty messages synchronize in both directions",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "faculty QR image decodes locally, student claims attendance and replay is rejected",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 409 (Conflict)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/attendance/claim",
+        "status": 409
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "calendar events, month navigation and faculty timetable edits synchronize",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "role restrictions, upload errors and protected official academic fields",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/submissions",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "settings preferences persist and student logout protects the dashboard",
+    "errors": [],
+    "http": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-phase3",
+    "test": "student password change refreshes CSRF and accepts only the new password",
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "http": [
+      {
+        "path": "/api/v1/student/settings/password",
+        "status": 400
+      }
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "main localhost, role selection and branded login",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "login validation, password visibility, recovery and invalid credentials",
+    "http": [
+      {
+        "path": "/api/v1/auth/login",
+        "status": 401
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 401 (Unauthorized)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "faculty UI login, session cookie and backend dashboard statistics",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "all eight sidebar modules and responsive navigation",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "calendar month navigation, date selection and persisted academic event",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "search, notification read and quick access links",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "message sending and persisted conversation history",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "course information, file upload/download, announcement and student roster",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "assessment creation, grading and publication persist",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "attendance QR, student claim and attendance record persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "settings profile and notification preference persistence",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "student route and server-side faculty access restrictions",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "faculty logout invalidates the session and protects routes",
+    "http": [],
+    "errors": [],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "dashboard loading state, clear API failure and successful retry",
+    "http": [
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      },
+      {
+        "path": "/api/v1/faculty/dashboard",
+        "status": 503
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)",
+      "Failed to load resource: the server responded with a status of 503 (Service Unavailable)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "faculty-phase3",
+    "test": "password validation, password change and reauthentication",
+    "http": [
+      {
+        "path": "/api/v1/faculty/settings/password",
+        "status": 400
+      }
+    ],
+    "errors": [
+      "Failed to load resource: the server responded with a status of 400 (Bad Request)"
+    ],
+    "failed": []
+  },
+  {
+    "viewport": "mobile",
+    "suite": "student-resource-regression",
+    "test": "faculty material and announcements appear in student LMS after refresh",
+    "errors": [],
+    "http": [],
+    "failed": []
+  }
+]

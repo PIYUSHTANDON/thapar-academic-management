@@ -1,0 +1,58 @@
+[
+  {
+    "name": "desktop",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "width": 1920,
+      "scrollWidth": 1920
+    },
+    "quickActions": [
+      "View Timetable",
+      "Submit Assignment",
+      "Check Results"
+    ]
+  },
+  {
+    "name": "laptop",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "width": 1366,
+      "scrollWidth": 1366
+    },
+    "quickActions": [
+      "View Timetable",
+      "Submit Assignment",
+      "Check Results"
+    ]
+  },
+  {
+    "name": "tablet",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "width": 768,
+      "scrollWidth": 768
+    },
+    "quickActions": [
+      "View Timetable",
+      "Submit Assignment",
+      "Check Results"
+    ]
+  },
+  {
+    "name": "mobile",
+    "errors": [],
+    "failed": [],
+    "layout": {
+      "width": 390,
+      "scrollWidth": 390
+    },
+    "quickActions": [
+      "View Timetable",
+      "Submit Assignment",
+      "Check Results"
+    ]
+  }
+]

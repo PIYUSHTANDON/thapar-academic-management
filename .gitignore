@@ -1,0 +1,20 @@
+node_modules/
+frontend/dist/
+backend/target/
+.tools/
+.env
+*.log
+data/
+
+frontend/test-results/
+qa/html/
+
+# Local configuration, database files and compiler caches
+.env.*
+!.env.example
+**/data/
+*.mv.db
+*.trace.db
+*.tsbuildinfo
+*.pem
+*.key

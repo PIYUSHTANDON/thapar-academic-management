@@ -1,0 +1,10 @@
+{
+  "url": "http://127.0.0.1:5173/",
+  "backendHealth": 200,
+  "viteProxyHealth": 200,
+  "browser": "158.0.8127.18",
+  "playwright": "1.65.0",
+  "errors": [],
+  "failed": [],
+  "passed": true
+}
