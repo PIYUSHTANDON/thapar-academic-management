@@ -8,12 +8,6 @@ import {
   ArrowRight,
   GraduationCap,
   BookOpen,
-  ShieldCheck,
-  CalendarDays,
-  Users,
-  ClipboardCheck,
-  Settings,
-  MessageSquare,
   ArrowLeft,
 } from "lucide-react";
 import logo from "../../assets/thapar-logo.webp";
@@ -95,10 +89,6 @@ export default function Login() {
         <div className="story-copy">
           <p className="institute-line">Academic Management System</p>
           <h1>{faculty ? "Faculty" : "Student"} Portal</h1>
-          <p>
-            Academic Management System — {faculty ? "Faculty" : "Student"}{" "}
-            Access
-          </p>
           <div className="red-rule" />
         </div>
         <p className="story-footer">
@@ -197,32 +187,7 @@ export default function Login() {
               <ArrowRight size={23} />
             </button>
           </form>
-          <div className="secure-note">
-            <ShieldCheck size={16} /> Secure institute access
-          </div>
         </div>
-        <div className="portal-features">
-          {[
-            [MessageSquare, "Messages"],
-            [ClipboardCheck, "Attendance"],
-            [BookOpen, "Courses & LMS"],
-            [CalendarDays, "Calendar"],
-            [Users, "Student Roster"],
-            [Settings, "Settings"],
-          ].map(([Icon, title]) => {
-            const I = Icon as typeof Mail;
-            return (
-              <span key={String(title)}>
-                <I size={21} />
-                {String(title)}
-              </span>
-            );
-          })}
-        </div>
-        <p className="authorized">
-          <ShieldCheck size={19} /> For authorized{" "}
-          {faculty ? "faculty members" : "students"} only.
-        </p>
       </section>
       {forgot && (
         <div className="modal-backdrop">
