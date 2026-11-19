@@ -1,6 +1,9 @@
 node_modules/
 frontend/dist/
 backend/target/
+contracts/target/
+desktop/target/
+dist/
 .tools/
 .env
 *.log

@@ -1,47 +1,48 @@
 package com.thapar.ams.exception;
 
-import java.util.*;
-import org.springframework.http.*;
+import com.thapar.ams.contract.AuthContracts.ApiErrorResponse;
+import java.util.NoSuchElementException;
+import java.util.Objects;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.ExceptionHandler;
+import org.springframework.web.bind.annotation.RestControllerAdvice;
+import org.springframework.web.server.ResponseStatusException;
 
 @RestControllerAdvice
 public class ApiExceptionHandler {
 
-  @ExceptionHandler(java.util.NoSuchElementException.class)
-  public ResponseEntity<?> notFound() {
+  @ExceptionHandler(NoSuchElementException.class)
+  public ResponseEntity<ApiErrorResponse> notFound() {
     return ResponseEntity.status(404).body(
-      Map.of("message", "Resource not found")
+      new ApiErrorResponse("Resource not found")
     );
   }
 
-  @ExceptionHandler(
-    org.springframework.dao.DataIntegrityViolationException.class
-  )
-  public ResponseEntity<?> conflict() {
+  @ExceptionHandler(DataIntegrityViolationException.class)
+  public ResponseEntity<ApiErrorResponse> conflict() {
     return ResponseEntity.status(409).body(
-      Map.of("message", "This operation conflicts with an existing record")
+      new ApiErrorResponse("This operation conflicts with an existing record")
     );
   }
 
-  @ExceptionHandler(
-    org.springframework.web.server.ResponseStatusException.class
-  )
-  public ResponseEntity<?> requestError(
-    org.springframework.web.server.ResponseStatusException e
+  @ExceptionHandler(ResponseStatusException.class)
+  public ResponseEntity<ApiErrorResponse> requestError(
+    ResponseStatusException e
   ) {
     return ResponseEntity.status(e.getStatusCode()).body(
-      Map.of("message", Objects.toString(e.getReason(), "Request failed"))
+      new ApiErrorResponse(Objects.toString(e.getReason(), "Request failed"))
     );
   }
 
   @ExceptionHandler(MethodArgumentNotValidException.class)
-  public ResponseEntity<?> invalid(MethodArgumentNotValidException e) {
+  public ResponseEntity<ApiErrorResponse> invalid(
+    MethodArgumentNotValidException e
+  ) {
     return ResponseEntity.badRequest().body(
-      Map.of(
-        "message",
+      new ApiErrorResponse(
         "Please check the supplied fields",
-        "errors",
         e
           .getBindingResult()
           .getFieldErrors()

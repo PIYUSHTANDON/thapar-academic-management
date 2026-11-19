@@ -12,14 +12,16 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
-@SpringBootTest(
-  properties = {
-    "spring.datasource.url=jdbc:h2:mem:local-demo-tests;MODE=MySQL;DB_CLOSE_DELAY=-1",
-    "seed.enabled=false",
-  }
-)
+@SpringBootTest(properties = { "seed.enabled=false" })
 @Transactional
 class LocalFacultyDemoSeederTest {
+
+  @org.springframework.test.context.DynamicPropertySource
+  static void database(
+    org.springframework.test.context.DynamicPropertyRegistry registry
+  ) {
+    PostgresTestSupport.register(registry, "fseed");
+  }
 
   @Autowired
   LocalFacultyDemoSeeder seed;

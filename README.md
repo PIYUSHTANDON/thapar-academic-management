@@ -1,10 +1,27 @@
 # Thapar Academic Management System
 
-A Java 21 / Spring Boot application with a React + TypeScript faculty workspace. The integrated Student Dashboard and all eight student modules are implemented from the approved student reference.
+A Java 21 / Spring Boot academic system with a JavaFX desktop client for faculty and students. The earlier React + TypeScript client is retained as a behavior and visual reference while desktop parity review is deferred.
+
+## JavaFX desktop migration
+
+The new `desktop/` module is the JavaFX client being built to replace the browser frontend. It includes role selection, login, session/CSRF API access, faculty and student dashboards, month calendars, notifications, attendance, assessments, submissions, published results, courses, learning resources, announcements, the faculty roster, class schedule editing, conversations, and account settings. QR generation, image decoding, and camera scanning are Java modules; `QrScanner` keeps the camera adapter replaceable. All named desktop destinations are implemented. The current React app remains the visual reference until parity review and final consolidation.
+
+Start the backend, then run `powershell -NoProfile -ExecutionPolicy Bypass -File desktop/mvnw.ps1 javafx:run` with JDK 21+. The client uses `http://127.0.0.1:8080/api/v1` by default; set `AMS_API_BASE` to a different full API prefix if needed. See [JAVA_DESKTOP_MIGRATION_PLAN.md](JAVA_DESKTOP_MIGRATION_PLAN.md), [desktop-route-map.md](docs/desktop-route-map.md), and [desktop-progress.md](docs/desktop-progress.md) for the ordered work and handoff state.
 
 ## Project structure
 
 ```text
+pom.xml / mvnw.ps1             Parent Maven reactor (contracts, backend, desktop)
+contracts/
+  pom.xml                      Zero-framework shared DTO module (validation + Jackson annotations)
+  src/main/java/com/thapar/ams/contract/
+    AuthContracts.java         Auth, session, CSRF, role, and API error records
+    OverviewContracts.java     Dashboard and calendar records
+    CourseContracts.java       Course, roster, schedule, resource, and search records
+    AttendanceContracts.java   Attendance token, claim, summary, and history records
+    AssessmentContracts.java   Assessment, submission, grade, and results records
+    MessageContracts.java      Contact and message records
+    AccountContracts.java      Student profile, notification, and settings records
 backend/
   pom.xml
   mvnw.ps1                     Windows Maven bootstrap (project-local cache)
@@ -13,16 +30,23 @@ backend/
     AmsApplication.java
     config/                    Local-only synthetic seeding
     controller/                Auth, faculty and student REST endpoints
-    dto/                       Validated authentication request
     entity/                    14 relational JPA entities
     exception/                 Safe API validation responses
     repository/                Spring Data repositories
     security/                  BCrypt, session security and login throttle
-    service/                   Faculty data queries and ownership checks
+    service/                   Faculty and student feature services
   src/main/resources/
-    application.yml            local H2 / mysql profiles
+    application.yml            local H2 / mysql / postgres profiles
     db/migration/V1__academic_schema.sql
   src/test/java/com/thapar/ams/AcademicIntegrationTest.java
+desktop/
+  pom.xml                      JavaFX client dependencies and Java 21 target
+  src/main/java/com/thapar/ams/desktop/
+    App.java                   Startup and screen navigation
+    api/                       Typed requests, cookies, and CSRF
+    ui/                        Shared views and role-specific screens
+    qr/                        Java QR codec and replaceable camera adapter
+  src/main/resources/css/      Small JavaFX theme
 frontend/
   .env.example
   package.json / package-lock.json
@@ -40,19 +64,31 @@ frontend/
     styles.css                 Tailwind + reference-based responsive styling
 references/                    Original supplied references, unchanged
 scripts/smoke_test.py           Ephemeral real-server HTTP test
+scripts/package-java-desktop.ps1  Portable Windows Java distribution
 ```
 
 ## Requirements
 
-- JDK **21**, Node.js **22+**, npm, and Maven **3.9+**.
-- MySQL **8** is optional for local use. The default `local` profile uses an H2 file database in `data/` relative to the server working directory.
-- Phase 2 QA installed a checksum-verified portable Microsoft JDK 21 under `.tools/jdk21/`. The backend was compiled, packaged, started and tested on JDK 21. See [QA_REPORT.md](QA_REPORT.md) for exact results.
+- JDK **21+** and Maven **3.9+** for the Java application. The module wrappers can bootstrap Maven into `.tools/`.
+- **Docker Desktop** (PostgreSQL 17 is the sole database backend, started via `scripts/start-postgres.ps1`).
 
-## Run locally on Windows
+## Run the Java desktop app on Windows
+
+### Single-command Maven launch (PostgreSQL)
+
+Ensure Docker PostgreSQL is running (first time or after reboot: `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-postgres.ps1`), then from the repository root run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File mvnw.ps1 -Papp
+```
+
+This packages `contracts`, `backend`, and `desktop`, loads database credentials from `.env.postgres`, automatically starts the Spring Boot backend on port `8081` (or a free port if occupied) connected to PostgreSQL (`127.0.0.1:55432/thapar_ams`, schema `academic`), opens the JavaFX desktop window connected to it, and stops the backend cleanly when you close the window. To point at an already-running server instead, set `$env:AMS_API_BASE` first.
+
+### Manual two-terminal startup (for separate backend logs or first-time seeding)
 
 Open two PowerShell terminals in the project root.
 
-### 1. Configure local synthetic accounts and start Java
+### 1. Configure local synthetic accounts and start the backend
 
 The application has **no default login credentials**. Choose your own local identifiers and passwords. Passwords must have at least 12 characters. No real faculty/student records are seeded.
 
@@ -72,7 +108,27 @@ powershell -ExecutionPolicy Bypass -File backend/mvnw.ps1 spring-boot:run
 
 Seeding runs only under the `local` profile with `SEED_ENABLED=true`. If the faculty identifier already exists, it leaves existing records untouched. Retain the same IDs on later runs, or turn seeding off after the first successful start. Changing seed environment passwords does not reset existing accounts. The sample includes a named demo faculty, one explicitly synthetic student, three courses, today's sessions, draft assessments, a submission, a message, a notification and an academic event.
 
-### 2. Start React
+### 2. Start JavaFX
+
+In a second PowerShell terminal at the project root:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File desktop/mvnw.ps1 javafx:run
+```
+
+Choose Faculty or Student and sign in with the accounts configured above. The desktop client talks directly to the local API. It has no Node or browser requirement. To use another backend, set `AMS_API_BASE` to its full API prefix before starting JavaFX.
+
+### Optional: build a portable Windows distribution
+
+With Maven Central access and JDK 21+, run:
+
+```powershell
+powershell -NoProfile -ExecutionPolicy Bypass -File scripts/package-java-desktop.ps1
+```
+
+The script builds the Java modules and writes `dist/java-desktop/` containing the server JAR, desktop JAR, runtime dependencies (including `ams-contracts-1.0.0.jar`), and `run-server.ps1` / `run-desktop.ps1`. On another Windows machine with JDK 21+, set the same local account environment values, start `run-server.ps1` in one terminal, then start `run-desktop.ps1` in another. The server stores its local H2 data under the distribution folder. The distribution is a portable folder, not an installer or a bundled JRE. Stop any running backend process locking `backend/target/ams-1.0.0.jar` before packaging.
+
+### Optional: run the retained React reference
 
 ```powershell
 npm.cmd install --prefix frontend
@@ -81,7 +137,11 @@ npm.cmd run dev --prefix frontend
 
 Visit **http://127.0.0.1:5173**. Choose Faculty or Student, then use the credentials you configured. Java listens on port 8080; Vite proxies `/api` to it. Use the same hostname throughout. No CORS bypass is needed.
 
-The `.env.example` files list available settings. Spring Boot does **not** automatically load a `.env` file: export backend values in the process environment or configure them in your IDE. Vite loads `frontend/.env` if you create it.
+The `.env.example` files list available settings. Spring Boot does **not** automatically load a `.env` file: export backend values in the process environment or configure them in your IDE. Vite loads `frontend/.env` if you use the reference client.
+
+## PostgreSQL with Docker
+
+Run `powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-postgres.ps1 -StartBackend` to start the local PostgreSQL container and connect Spring Boot using the `postgres` profile. Flyway creates the tables in the `academic` schema and Hibernate validates them. See [PostgreSQL setup](docs/postgres.md) for credentials, persistence, and the migration layout. This creates a fresh database; existing H2 records are not imported.
 
 ## MySQL 8
 
@@ -152,13 +212,13 @@ The Flyway migration defines `User`, `Faculty`, `Student`, `Course`, `Enrollment
 ## Build and verify
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File backend/mvnw.ps1 test
-powershell -ExecutionPolicy Bypass -File backend/mvnw.ps1 package
-npm.cmd run build --prefix frontend
+powershell -ExecutionPolicy Bypass -File mvnw.ps1 test
+powershell -ExecutionPolicy Bypass -File mvnw.ps1 verify
+powershell -ExecutionPolicy Bypass -File scripts/package-java-desktop.ps1
 python scripts/smoke_test.py
 ```
 
-The HTTP smoke test launches an isolated Java server on port 8081 with a temporary in-memory H2 database and random environment-provided accounts. It tests real cookie/CSRF login, faculty APIs, persisted writes and student role denial, then terminates its server. It does not modify your local database. Python 3 is needed only for this optional check.
+`mvnw.ps1 test` compiles `contracts` and runs all backend tests (including strict `ContractSerializationTest`) plus desktop unit tests (`ApiClientTest`, `DesktopApiTypedSerializationTest`, `QrCodecTest`). `mvnw.ps1 verify` additionally packages the backend JAR and runs live end-to-end `DesktopBackendContractIT` against an isolated in-memory H2 server (stop any running backend holding `backend/target/ams-1.0.0.jar` on Windows before running `verify` or `package-java-desktop.ps1`). For the retained browser reference, run `npm.cmd run build --prefix frontend` separately. The HTTP smoke test launches an isolated Java server on port 8081 with a temporary in-memory H2 database and random environment-provided accounts. It tests real cookie/CSRF login, faculty APIs, persisted writes and student role denial, then terminates its server. It does not modify your local database. Python 3 is needed only for this optional check.
 
 Executed Phase 2 results and browser screenshots are documented in [QA_REPORT.md](QA_REPORT.md). The browser suite uses real Spring Boot APIs and isolated file-backed H2 databases with random, process-environment credentials.
 

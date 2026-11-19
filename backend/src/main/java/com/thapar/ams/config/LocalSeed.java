@@ -12,7 +12,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.transaction.annotation.Transactional;
 
 @Configuration
-@Profile("local & !mysql & !staging & !prod & !production")
+@Profile("local & !staging & !prod & !production")
 @ConditionalOnProperty(name = "seed.enabled", havingValue = "true")
 public class LocalSeed implements ApplicationRunner {
 

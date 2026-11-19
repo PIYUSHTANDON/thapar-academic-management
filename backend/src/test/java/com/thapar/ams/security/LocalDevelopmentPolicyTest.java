@@ -5,7 +5,6 @@ import static org.mockito.Mockito.*;
 
 import com.thapar.ams.entity.*;
 import com.thapar.ams.repository.*;
-import com.thapar.ams.security.*;
 import java.sql.*;
 import java.util.*;
 import javax.sql.DataSource;
@@ -29,34 +28,47 @@ class LocalDevelopmentPolicyTest {
   }
 
   @Test
-  void permitsOnlyLocalH2() throws Exception {
+  void permitsOnlyLocalPostgres() throws Exception {
     assertTrue(
-      policy(new String[] { "local" }, "jdbc:h2:mem:demo").permitsDemoAccounts()
+      policy(
+        new String[] { "local" },
+        "jdbc:postgresql://127.0.0.1:55432/thapar_ams?currentSchema=academic"
+      ).permitsDemoAccounts()
     );
     assertTrue(
-      policy(new String[] {}, "jdbc:h2:mem:demo").permitsDemoAccounts()
+      policy(
+        new String[] {},
+        "jdbc:postgresql://localhost:55432/thapar_ams"
+      ).permitsDemoAccounts()
     );
     assertFalse(
       policy(
         new String[] { "local" },
-        "jdbc:mysql://localhost/ams"
+        "jdbc:postgresql://db.example.com:5432/thapar_ams"
+      ).permitsDemoAccounts()
+    );
+    assertFalse(
+      policy(
+        new String[] { "local" },
+        "jdbc:h2:mem:demo"
       ).permitsDemoAccounts()
     );
   }
 
   @Test
-  void rejectsMysqlStagingProductionAndMixedProfiles() throws Exception {
+  void rejectsStagingProductionAndMixedProfiles() throws Exception {
     for (var profiles : List.of(
-      new String[] { "mysql" },
       new String[] { "staging" },
       new String[] { "prod" },
       new String[] { "production" },
-      new String[] { "local", "mysql" },
       new String[] { "local", "staging" },
       new String[] { "local", "production" }
     ))
       assertFalse(
-        policy(profiles, "jdbc:h2:mem:demo").permitsDemoAccounts(),
+        policy(
+          profiles,
+          "jdbc:postgresql://127.0.0.1:55432/thapar_ams"
+        ).permitsDemoAccounts(),
         Arrays.toString(profiles)
       );
   }

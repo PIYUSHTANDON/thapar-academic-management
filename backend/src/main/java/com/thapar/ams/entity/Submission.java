@@ -27,7 +27,7 @@ public class Submission {
   public java.time.LocalDateTime submittedAt;
 
   @Lob
-  @Column(columnDefinition = "longblob")
+
   public byte[] fileContent;
 
   public String fileName;

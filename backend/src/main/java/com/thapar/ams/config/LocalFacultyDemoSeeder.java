@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Component
-@Profile("local & !mysql & !staging & !prod & !production")
+@Profile("local & !staging & !prod & !production")
 public class LocalFacultyDemoSeeder {
 
   private final FacultyService s;
@@ -31,7 +31,7 @@ public class LocalFacultyDemoSeeder {
   @Transactional
   public void seed(String identifier, String password, String displayName) {
     if (!policy.permitsDemoAccounts()) throw new IllegalStateException(
-      "Demo provisioning requires exclusively the local profile and an H2 database"
+      "Demo provisioning requires exclusively the local profile and a local PostgreSQL database"
     );
     if (
       identifier == null ||

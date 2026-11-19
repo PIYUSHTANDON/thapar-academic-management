@@ -19,7 +19,7 @@ public class LearningResource {
   public String kind;
 
   @Lob
-  @Column(columnDefinition = "longblob")
+
   public byte[] content;
 
   public String contentType;

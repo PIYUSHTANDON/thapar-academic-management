@@ -6,10 +6,22 @@ logging:
 spring:
   profiles:
     default: local
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://127.0.0.1:55432/thapar_ams?currentSchema=academic}
+    username: ${DB_USER:ams}
+    password: ${DB_PASSWORD}
+  flyway:
+    locations: classpath:db/postgresql
+    default-schema: academic
+    schemas: academic
+    create-schemas: true
   jpa:
     open-in-view: false
     hibernate:
       ddl-auto: validate
+    properties:
+      hibernate:
+        default_schema: academic
   servlet:
     multipart:
       max-file-size: 10MB
@@ -28,20 +40,7 @@ server:
 spring:
   config:
     activate:
-      on-profile: local
-  datasource:
-    url: jdbc:h2:file:./data/ams;MODE=MySQL;DB_CLOSE_ON_EXIT=FALSE;WRITE_DELAY=0
-    username: sa
-    password: ${H2_PASSWORD:}
----
-spring:
-  config:
-    activate:
-      on-profile: mysql
-  datasource:
-    url: ${DB_URL}
-    username: ${DB_USER}
-    password: ${DB_PASSWORD}
+      on-profile: production
 server:
   servlet:
     session:

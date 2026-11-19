@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Component
-@Profile("local & !mysql & !staging & !prod & !production")
+@Profile("local & !staging & !prod & !production")
 public class LocalStudentDemoSeeder {
 
   private final FacultyService s;
@@ -35,7 +35,7 @@ public class LocalStudentDemoSeeder {
     String facultyIdentifier
   ) {
     if (!policy.permitsDemoAccounts()) throw new IllegalStateException(
-      "Student demo provisioning requires the sole local profile and H2"
+      "Student demo provisioning requires the sole local profile and local PostgreSQL"
     );
     if (
       identifier == null ||

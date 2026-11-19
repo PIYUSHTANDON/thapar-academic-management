@@ -24,7 +24,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 @SpringBootTest(
   properties = {
-    "spring.datasource.url=jdbc:h2:mem:student-portal;MODE=MySQL;DB_CLOSE_DELAY=-1",
     "seed.enabled=true",
     "SEED_FACULTY_ID=student-test-faculty",
     "SEED_STUDENT_ID=student-test-student",
@@ -39,6 +38,7 @@ class StudentPortalIntegrationTest {
 
   @DynamicPropertySource
   static void credentials(DynamicPropertyRegistry registry) {
+    PostgresTestSupport.register(registry, "student");
     String fp = FACULTY_PASSWORD,
       sp = STUDENT_PASSWORD;
     registry.add("SEED_FACULTY_PASSWORD", () -> fp);

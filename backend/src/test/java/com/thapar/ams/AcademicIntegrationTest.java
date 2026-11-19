@@ -20,7 +20,6 @@ import org.springframework.test.web.servlet.*;
 
 @SpringBootTest(
   properties = {
-    "spring.datasource.url=jdbc:h2:mem:ams-test;MODE=MySQL;DB_CLOSE_DELAY=-1",
     "seed.enabled=true",
     "SEED_FACULTY_ID=test-faculty",
     "SEED_STUDENT_ID=test-student",
@@ -37,6 +36,7 @@ class AcademicIntegrationTest {
   static void generatedCredentials(
     org.springframework.test.context.DynamicPropertyRegistry registry
   ) {
+    PostgresTestSupport.register(registry, "acad");
     registry.add("SEED_FACULTY_PASSWORD", () -> FACULTY_PASSWORD);
     registry.add("SEED_STUDENT_PASSWORD", () -> STUDENT_PASSWORD);
   }
