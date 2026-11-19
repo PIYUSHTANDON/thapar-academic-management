@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { NavLink, Outlet, Link, useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Outlet, Link, useNavigate } from "react-router-dom";
 import {
   Home,
   MessageSquare,
@@ -9,17 +9,23 @@ import {
   CalendarDays,
   Users,
   Settings,
-  Menu,
-  Search,
-  Bell,
   ChevronDown,
   LogOut,
   X,
   UserRound,
 } from "lucide-react";
-import logo from "../assets/thapar-logo.webp";
+import { motion } from "framer-motion";
+import logoDark from "../assets/thapar-logo-dark.png";
+import crestDark from "../assets/thapar-crest-dark.png";
 import { useAuth } from "../hooks/useAuth";
-import { api, errorText } from "../services/api";
+import { errorText } from "../services/api";
+import {
+  Sidebar,
+  SidebarBody,
+  SidebarLink,
+  useSidebar,
+} from "../components/ui/sidebar";
+
 const nav = [
   ["dashboard", "Dashboard", Home],
   ["messages", "Messages", MessageSquare],
@@ -30,277 +36,143 @@ const nav = [
   ["students", "Student Roster", Users],
   ["settings", "Settings", Settings],
 ] as const;
-export default function FacultyLayout() {
-  const { user, logout } = useAuth();
-  const navigate = useNavigate();
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [compact, setCompact] = useState(window.innerWidth <= 1000);
-  const [collapsed, setCollapsed] = useState(false),
-    [mobile, setMobile] = useState(false),
-    [menu, setMenu] = useState(""),
-    [query, setQuery] = useState(""),
-    [results, setResults] = useState<any[]>([]),
-    [notes, setNotes] = useState<any[]>([]),
-    [error, setError] = useState("");
-  useEffect(() => {
-    const media = window.matchMedia("(max-width: 1000px)");
-    const resize = () => {
-      setCompact(media.matches);
-      if (!media.matches) setMobile(false);
-    };
-    const escape = (event: KeyboardEvent) => {
-      if (event.key === "Escape") {
-        setMobile(false);
-        setMenu("");
-        setSearchOpen(false);
-      }
-    };
-    media.addEventListener("change", resize);
-    document.addEventListener("keydown", escape);
-    return () => {
-      media.removeEventListener("change", resize);
-      document.removeEventListener("keydown", escape);
-    };
-  }, []);
-  useEffect(() => {
-    api
-      .get("/faculty/notifications")
-      .then((r) => setNotes(r.data))
-      .catch(() => {});
-  }, []);
-  useEffect(() => {
-    if (!query.trim()) {
-      setResults([]);
-      return;
-    }
-    let live = true;
-    const t = setTimeout(() => {
-      Promise.all([api.get("/faculty/courses"), api.get("/faculty/students")])
-        .then(([c, s]) => {
-          if (live)
-            setResults(
-              [
-                ...c.data.map((c: any) => ({
-                  label: c.title + " · " + c.code,
-                  path: "/faculty/courses",
-                  kind: "Course",
-                })),
-                ...s.data.map((s: any) => ({
-                  label: s.name + " · " + s.enrollmentNumber,
-                  path: "/faculty/students",
-                  kind: "Student",
-                })),
-              ]
-                .filter((v) =>
-                  v.label.toLowerCase().includes(query.toLowerCase()),
-                )
-                .slice(0, 8),
-            );
-        })
-        .catch((e) => setError(errorText(e)));
-    }, 250);
-    return () => {
-      live = false;
-      clearTimeout(t);
-    };
-  }, [query]);
-  async function signout() {
-    try {
-      await logout();
-      navigate("/");
-    } catch (e) {
-      setError(errorText(e));
-    }
-  }
-  const initials = user?.name
-    .replace(/\(.*\)/, "")
-    .split(" ")
-    .filter((x) => x !== "Dr.")
-    .slice(0, 2)
-    .map((x) => x[0])
-    .join("");
+
+function FacultySidebarInner({
+  user,
+  initials,
+  menu,
+  setMenu,
+  signout,
+}: {
+  user: any;
+  initials: string;
+  menu: string;
+  setMenu: (val: string) => void;
+  signout: () => void;
+}) {
+  const { open } = useSidebar();
+
   return (
-    <div
-      className={
-        "app-shell " +
-        (collapsed ? "sidebar-collapsed " : "") +
-        (mobile ? "mobile-open" : "")
-      }
-    >
-      {mobile && (
-        <button
-          className="mobile-scrim"
-          aria-label="Close navigation"
-          onClick={() => setMobile(false)}
-        />
-      )}
-      <aside className="sidebar" inert={compact && !mobile}>
-        <Link to="/faculty/dashboard" className="sidebar-brand">
-          <img src={logo} alt="Thapar Institute of Engineering & Technology" />
+    <div className="sidebar-content-inner">
+      <div className="sidebar-brand-wrapper">
+        <Link to="/faculty/dashboard" className="sidebar-brand-link">
+          {open ? (
+            <motion.img
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.18 }}
+              src={logoDark}
+              alt="Thapar Institute"
+              className="sidebar-logo-expanded"
+            />
+          ) : (
+            <img
+              src={crestDark}
+              alt="Thapar Institute"
+              className="sidebar-logo-collapsed"
+            />
+          )}
         </Link>
-        <div className="sidebar-divider" />
-        <nav aria-label="Faculty navigation">
-          {nav.map(([path, title, Icon]) => (
-            <NavLink
-              key={path}
-              to={"/faculty/" + path}
-              title={collapsed ? title : undefined}
-              onClick={() => setMobile(false)}
-            >
-              <Icon size={21} />
-              <span>{title}</span>
-              {path === "messages" && <i className="nav-dot" />}
-            </NavLink>
-          ))}
-        </nav>
-        <div className="sidebar-bottom">
-          <div className="campus-line" aria-hidden="true">
-            TIET <span>EST. 1956</span>
-          </div>
-          <Link className="faculty-profile" to="/faculty/settings">
+      </div>
+
+      <div className="sidebar-divider" />
+
+      <nav className="sidebar-nav-list" aria-label="Faculty navigation">
+        {nav.map(([path, title, Icon]) => (
+          <SidebarLink
+            key={path}
+            link={{
+              label: title,
+              href: "/faculty/" + path,
+              icon: <Icon size={21} />,
+              dot: path === "messages",
+            }}
+          />
+        ))}
+      </nav>
+
+      <div className="sidebar-bottom">
+        <div className="sidebar-profile-wrap">
+          <button
+            className={`faculty-profile sidebar-profile-btn ${
+              open ? "is-expanded" : "is-collapsed"
+            }`}
+            aria-label="Open profile menu"
+            aria-expanded={menu === "profile"}
+            onClick={() => setMenu(menu === "profile" ? "" : "profile")}
+          >
             <span className="avatar">{initials}</span>
-            <div>
+            {open && (
+              <motion.div
+                initial={{ opacity: 0, x: -6 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.15 }}
+                className="sidebar-profile-details"
+              >
+                <strong>{user?.name}</strong>
+                <small>Faculty · CSE</small>
+              </motion.div>
+            )}
+            {open && <ChevronDown size={16} className="profile-chevron" />}
+          </button>
+          {menu === "profile" && (
+            <div className="dropdown profile-menu sidebar-profile-menu">
               <strong>{user?.name}</strong>
-              <small>Faculty · CSE</small>
+              <small>{user?.identifier}</small>
+              <Link to="/faculty/settings" onClick={() => setMenu("")}>
+                <UserRound size={17} /> Profile & settings
+              </Link>
+              <button onClick={signout}>
+                <LogOut size={17} /> Sign out
+              </button>
             </div>
-            <ChevronDown size={16} />
-          </Link>
+          )}
         </div>
-      </aside>
-      <div className="main-shell">
-        <header className="topbar">
-          <button
-            className="icon-button desktop-toggle"
-            aria-label="Toggle sidebar"
-            onClick={() => setCollapsed(!collapsed)}
-          >
-            <Menu />
-          </button>
-          <button
-            className="icon-button mobile-toggle"
-            aria-label="Open navigation"
-            onClick={() => setMobile(true)}
-          >
-            <Menu />
-          </button>
-          <div className="topbar-title">
-            <strong>Academic Management System</strong>
-            <span>Thapar Institute of Engineering & Technology</span>
-          </div>
-          <div className="header-tools">
-            <button
-              className="icon-button mobile-search-toggle"
-              aria-label={searchOpen ? "Close search" : "Open search"}
-              aria-expanded={searchOpen}
-              onClick={() => setSearchOpen(!searchOpen)}
-            >
-              <Search size={20} />
-            </button>
-            <div className={"search-wrap " + (searchOpen ? "search-open" : "")}>
-              <Search size={20} />
-              <input
-                aria-label="Search courses and students"
-                placeholder="Search courses, students…"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-              {query && (
-                <button aria-label="Clear search" onClick={() => setQuery("")}>
-                  <X size={15} />
-                </button>
-              )}
-              {query && (
-                <div className="dropdown search-results">
-                  <small>SEARCH RESULTS</small>
-                  {results.map((r, i) => (
-                    <Link
-                      key={i}
-                      to={r.path}
-                      onClick={() => {
-                        setQuery("");
-                        setSearchOpen(false);
-                      }}
-                    >
-                      <span>{r.label}</span>
-                      <small>{r.kind}</small>
-                    </Link>
-                  ))}
-                  {!results.length && <p>No matching courses or students.</p>}
-                </div>
-              )}
-            </div>
-            <div className="dropdown-anchor">
-              <button
-                className="icon-button notification-button"
-                aria-label="Notifications"
-                aria-expanded={menu === "notifications"}
-                onClick={() =>
-                  setMenu(menu === "notifications" ? "" : "notifications")
-                }
-              >
-                <Bell size={23} />
-                {notes.some((n) => !n.read) && (
-                  <b>{notes.filter((n) => !n.read).length}</b>
-                )}
-              </button>
-              {menu === "notifications" && (
-                <div className="dropdown notifications">
-                  <h3>Notifications</h3>
-                  {notes.length ? (
-                    notes.map((n) => (
-                      <button
-                        key={n.id}
-                        className={n.read ? "read" : ""}
-                        onClick={async () => {
-                          try {
-                            await api.post(
-                              "/faculty/notifications/" + n.id + "/read",
-                            );
-                            setNotes(
-                              notes.map((v) =>
-                                v.id === n.id ? { ...v, read: true } : v,
-                              ),
-                            );
-                          } catch (e) {
-                            setError(errorText(e));
-                          }
-                        }}
-                      >
-                        {n.title}
-                        <small>{n.read ? "Read" : "Click to mark read"}</small>
-                      </button>
-                    ))
-                  ) : (
-                    <p>You’re all caught up.</p>
-                  )}
-                </div>
-              )}
-            </div>
-            <div className="dropdown-anchor">
-              <button
-                className="profile-trigger"
-                aria-label="Open profile menu"
-                aria-expanded={menu === "profile"}
-                onClick={() => setMenu(menu === "profile" ? "" : "profile")}
-              >
-                <span className="avatar dark">{initials}</span>
-                <ChevronDown size={17} />
-              </button>
-              {menu === "profile" && (
-                <div className="dropdown profile-menu">
-                  <strong>{user?.name}</strong>
-                  <small>{user?.identifier}</small>
-                  <Link to="/faculty/settings" onClick={() => setMenu("")}>
-                    <UserRound size={17} /> Profile & settings
-                  </Link>
-                  <button onClick={signout}>
-                    <LogOut size={17} /> Sign out
-                  </button>
-                </div>
-              )}
-            </div>
-          </div>
-        </header>
+      </div>
+    </div>
+  );
+}
+
+function FacultyLayoutContent({
+  user,
+  initials,
+  menu,
+  setMenu,
+  signout,
+  error,
+  setError,
+}: {
+  user: any;
+  initials: string;
+  menu: string;
+  setMenu: (val: string) => void;
+  signout: () => void;
+  error: string;
+  setError: (val: string) => void;
+}) {
+  const { open } = useSidebar();
+
+  return (
+    <div className={`app-shell ${open ? "sidebar-open" : "sidebar-closed"}`}>
+      <SidebarBody>
+        <FacultySidebarInner
+          user={user}
+          initials={initials}
+          menu={menu}
+          setMenu={setMenu}
+          signout={signout}
+        />
+      </SidebarBody>
+      <motion.div
+        className="main-shell"
+        animate={{
+          marginLeft: open ? "240px" : "72px",
+        }}
+        transition={{
+          duration: 0.22,
+          ease: [0.4, 0, 0.2, 1],
+        }}
+      >
         {error && (
           <div role="alert" className="global-error">
             {error}
@@ -310,7 +182,47 @@ export default function FacultyLayout() {
           </div>
         )}
         <Outlet />
-      </div>
+      </motion.div>
     </div>
+  );
+}
+
+export default function FacultyLayout() {
+  const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  const [menu, setMenu] = useState("");
+  const [error, setError] = useState("");
+
+  async function signout() {
+    try {
+      await logout();
+      navigate("/");
+    } catch (e) {
+      setError(errorText(e));
+    }
+  }
+
+  const initials = user?.name
+    ? user.name
+        .replace(/\(.*\)/, "")
+        .split(" ")
+        .filter((x: string) => x !== "Dr.")
+        .slice(0, 2)
+        .map((x: string) => x[0])
+        .join("")
+    : "FA";
+
+  return (
+    <Sidebar open={menu === "profile" ? true : undefined}>
+      <FacultyLayoutContent
+        user={user}
+        initials={initials}
+        menu={menu}
+        setMenu={setMenu}
+        signout={signout}
+        error={error}
+        setError={setError}
+      />
+    </Sidebar>
   );
 }

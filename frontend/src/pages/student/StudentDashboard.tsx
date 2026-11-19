@@ -14,6 +14,7 @@ import {
   UserRound,
   BookOpen,
   Pencil,
+  Bell,
 } from "lucide-react";
 import { useAuth } from "../../hooks/useAuth";
 import { api, errorText } from "../../services/api";
@@ -35,12 +36,14 @@ export default function StudentDashboard() {
     [deadlines, setDeadlines] = useState<any[]>([]),
     [announcements, setAnnouncements] = useState<any[]>([]),
     [events, setEvents] = useState<Event[]>([]),
+    [notes, setNotes] = useState<any[]>([]),
+    [notesOpen, setNotesOpen] = useState(false),
     [detail, setDetail] = useState<any>(null),
     [error, setError] = useState("");
   async function load() {
     setError("");
     try {
-      const [d, p, s, a, n, e] = await Promise.all(
+      const [d, p, s, a, n, e, notifs] = await Promise.all(
         [
           "dashboard",
           "profile",
@@ -48,6 +51,7 @@ export default function StudentDashboard() {
           "assessments",
           "announcements",
           "calendar",
+          "notifications",
         ].map((path) => api.get("/student/" + path)),
       );
       setData(d.data);
@@ -56,6 +60,7 @@ export default function StudentDashboard() {
       setDeadlines(a.data);
       setAnnouncements(n.data);
       setEvents(e.data);
+      setNotes(notifs.data);
     } catch (e) {
       setError(errorText(e));
     }
@@ -63,6 +68,16 @@ export default function StudentDashboard() {
   useEffect(() => {
     load();
   }, []);
+  useEffect(() => {
+    if (!notesOpen) return;
+    const clickAway = (e: MouseEvent) => {
+      if (!(e.target as HTMLElement).closest(".hero-notification-anchor")) {
+        setNotesOpen(false);
+      }
+    };
+    document.addEventListener("click", clickAway);
+    return () => document.removeEventListener("click", clickAway);
+  }, [notesOpen]);
   const today = dateKey(new Date());
   const classes = schedule.filter((s) => s.startsAt.startsWith(today));
   const upcoming = deadlines.filter((a) => a.status !== "Graded").slice(0, 4);
@@ -74,6 +89,49 @@ export default function StudentDashboard() {
   return (
     <main className="student-dashboard">
       <section className="welcome-hero">
+        <div className="hero-notification-anchor">
+          <button
+            className="hero-notification-btn"
+            aria-label="Notifications"
+            aria-expanded={notesOpen}
+            onClick={() => setNotesOpen(!notesOpen)}
+          >
+            <Bell size={21} />
+            {notes.some((n: any) => !n.read) && (
+              <span className="hero-notification-dot" aria-label="Unread notifications" />
+            )}
+          </button>
+          {notesOpen && (
+            <div className="dropdown notifications hero-notifications-dropdown">
+              <h3>Notifications</h3>
+              {notes.length ? (
+                notes.map((n: any) => (
+                  <button
+                    key={n.id}
+                    className={n.read ? "read" : ""}
+                    onClick={async () => {
+                      try {
+                        await api.post(`/student/notifications/${n.id}/read`);
+                        setNotes(
+                          notes.map((v: any) =>
+                            v.id === n.id ? { ...v, read: true } : v,
+                          ),
+                        );
+                      } catch (e) {
+                        setError(errorText(e));
+                      }
+                    }}
+                  >
+                    {n.title}
+                    <small>{n.read ? "Read" : "Click to mark read"}</small>
+                  </button>
+                ))
+              ) : (
+                <p>You’re all caught up.</p>
+              )}
+            </div>
+          )}
+        </div>
         <div className="hero-copy">
           <p className="institute-line">Thapar Institute</p>
           <h1>

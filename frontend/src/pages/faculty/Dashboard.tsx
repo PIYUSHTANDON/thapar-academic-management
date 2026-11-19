@@ -13,6 +13,7 @@ import {
   CircleAlert,
   FileText,
   QrCode,
+  Bell,
 } from "lucide-react";
 import { useAuth } from "../../hooks/useAuth";
 import { api, errorText } from "../../services/api";
@@ -30,18 +31,22 @@ export default function Dashboard() {
   const [data, setData] = useState<any>(null),
     [schedule, setSchedule] = useState<any[]>([]),
     [events, setEvents] = useState<Event[]>([]),
+    [notes, setNotes] = useState<any[]>([]),
+    [notesOpen, setNotesOpen] = useState(false),
     [error, setError] = useState("");
   async function load() {
     setError("");
     try {
-      const [d, s, e] = await Promise.all([
+      const [d, s, e, n] = await Promise.all([
         api.get("/faculty/dashboard"),
         api.get("/faculty/schedule"),
         api.get("/faculty/calendar"),
+        api.get("/faculty/notifications"),
       ]);
       setData(d.data);
       setSchedule(s.data);
       setEvents(e.data);
+      setNotes(n.data);
     } catch (e) {
       setError(errorText(e));
     }
@@ -49,6 +54,16 @@ export default function Dashboard() {
   useEffect(() => {
     load();
   }, []);
+  useEffect(() => {
+    if (!notesOpen) return;
+    const clickAway = (e: MouseEvent) => {
+      if (!(e.target as HTMLElement).closest(".hero-notification-anchor")) {
+        setNotesOpen(false);
+      }
+    };
+    document.addEventListener("click", clickAway);
+    return () => document.removeEventListener("click", clickAway);
+  }, [notesOpen]);
   const today = dateKey(new Date()),
     todaySchedule = schedule.filter((s) => s.startsAt.startsWith(today));
   const quick = [
@@ -60,6 +75,49 @@ export default function Dashboard() {
   return (
     <main className="dashboard">
       <section className="welcome-hero">
+        <div className="hero-notification-anchor">
+          <button
+            className="hero-notification-btn"
+            aria-label="Notifications"
+            aria-expanded={notesOpen}
+            onClick={() => setNotesOpen(!notesOpen)}
+          >
+            <Bell size={21} />
+            {notes.some((n: any) => !n.read) && (
+              <span className="hero-notification-dot" aria-label="Unread notifications" />
+            )}
+          </button>
+          {notesOpen && (
+            <div className="dropdown notifications hero-notifications-dropdown">
+              <h3>Notifications</h3>
+              {notes.length ? (
+                notes.map((n: any) => (
+                  <button
+                    key={n.id}
+                    className={n.read ? "read" : ""}
+                    onClick={async () => {
+                      try {
+                        await api.post(`/faculty/notifications/${n.id}/read`);
+                        setNotes(
+                          notes.map((v: any) =>
+                            v.id === n.id ? { ...v, read: true } : v,
+                          ),
+                        );
+                      } catch (e) {
+                        setError(errorText(e));
+                      }
+                    }}
+                  >
+                    {n.title}
+                    <small>{n.read ? "Read" : "Click to mark read"}</small>
+                  </button>
+                ))
+              ) : (
+                <p>You’re all caught up.</p>
+              )}
+            </div>
+          )}
+        </div>
         <div className="hero-copy">
           <p className="institute-line">Thapar Institute</p>
           <h1>
